@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 # Design
-![Design](../assets/UsersRest-design.png)
+![Design](https://github.com/christopherqmendivel/usersApp/blob/main/src/assets/UsersRest-design.png)
