@@ -1,5 +1,12 @@
 .list-user {
     display: block;
     max-width: 80%;
-    margin: 0 auto;
+}
+
+.btn-repository {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    margin: 0.5rem;
 }

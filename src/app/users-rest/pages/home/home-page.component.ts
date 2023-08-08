@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from '../../interface/user.interface';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
-  public title: string = 'lista de usuarios';
+
+  public title: string = 'hello reqRes users!';
+
+  constructor(private usersService: UserService){}
+  
+
+  get usersList(): User[]{
+    return this.usersService.userList;
+  }
+
+  get totalPages(): number {
+    return this.usersService.totalPages;
+  }
+
+  get onNumberPage(): number {
+    return this.usersService.numberPage;
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../interface/user.interface';
 
@@ -7,17 +7,19 @@ import { User } from '../../interface/user.interface';
   templateUrl: './list-users.component.html',
   styleUrls: ['./list-users.component.css']
 })
-export class ListUsersComponent implements OnInit{
+export class ListUsersComponent {
   
+  @Input()
+  public usersList: User[] = [];
+  //public totalPage : number = 1;
+
   constructor( private usersService: UserService ){}
 
-  public users: User[] = [];
-
   ngOnInit(): void {
-    this.usersService.AllUsers
-      .subscribe( resp => {
-        this.users = resp.data;
-      })
+    this.usersService.AllUsers.subscribe(); 
   }
+    
+  
 
+  
 }

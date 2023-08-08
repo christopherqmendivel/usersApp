@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { HomePageComponent } from './pages/home/home-page.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 
 @NgModule({
   declarations: [
-    PaginationComponent,
     ListUsersComponent,
     HomePageComponent
   ],
@@ -16,7 +14,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     CommonModule
   ],
   exports: [
-    HomePageComponent
+    HomePageComponent,
   ]
 })
 export class UsersModule { }

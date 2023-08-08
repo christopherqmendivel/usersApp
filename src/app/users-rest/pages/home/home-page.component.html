@@ -1,8 +1,11 @@
+<div class="container">
+    <div class="row position-relative">
+        <div class="col p-3 d-flex flex-column">
+            <h1 class="text-white text-center w-100">{{ title | titlecase }}</h1>
+            <app-list-users [usersList]="usersList"></app-list-users>
+        </div>
+        <a href="https://github.com/christopherqmendivel/usersApp.git" class="btn btn-dark btn-repository" role="button">Repository</a>
 
-<div class="bg-black row gx-0">
-    <div class="col p-3">
-        <h1 class="text-white text-center w-100">{{ title | titlecase }}</h1>
-        <app-list-users class="list-user"></app-list-users>
     </div>
-</div>
 
+</div>
